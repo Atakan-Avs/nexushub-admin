@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Reports - NexusHub Dashboard</title>
+        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="reports.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <span class="logo">NexusHub</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="sidebar.html">Dashboard</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="orders.html">Orders</a></li>
+          <li><a href="customers.html">Customers</a></li>
+          <li><a href="campaigns.html">Campaigns</a></li>
+          <li><a href="reports.html">Reports</a></li>
+          <li><a href="#">Settings</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main">
+      <!-- Header -->
+      <header class="header">
+        <div class="date-filter">
+          <select>
+            <option>Last 7 Days</option>
+            <option>Last 30 Days</option>
+            <option>Last 90 Days</option>
+            <option>This Year</option>
+            <option>Custom Range</option>
+          </select>
+        </div>
+        <div class="profile">
+          <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Profile"/>
+        </div>
+      </header>
+
+      <!-- Overview Cards -->
+      <section class="cards">
+        <div class="card purple">
+          <h3>Total Revenue</h3>
+          <p class="amount">$45,678</p>
+          <span>+12.5% from last period</span>
+        </div>
+        <div class="card pink">
+          <h3>Total Orders</h3>
+          <p class="amount">1,234</p>
+          <span>+8.3% from last period</span>
+        </div>
+        <div class="card turquoise">
+          <h3>Average Order Value</h3>
+          <p class="amount">$37.02</p>
+          <span>+4.2% from last period</span>
+        </div>
+        <div class="card indigo">
+          <h3>Customer Acquisition</h3>
+          <p class="amount">245</p>
+          <span>+15.7% from last period</span>
+        </div>
+      </section>
+
+      <!-- Charts Section -->
+      <section class="charts-section">
+        <div class="chart-container">
+          <div class="chart-header">
+            <h3>Revenue Overview</h3>
+            <div class="chart-actions">
+              <button class="btn-export">Export</button>
+            </div>
+          </div>
+          <canvas id="revenueChart"></canvas>
+        </div>
+
+        <div class="chart-container">
+          <div class="chart-header">
+            <h3>Top Products</h3>
+            <div class="chart-actions">
+              <button class="btn-export">Export</button>
+            </div>
+          </div>
+          <canvas id="productsChart"></canvas>
+        </div>
+      </section>
+
+      <!-- Detailed Reports -->
+      <section class="reports-grid">
+        <div class="report-card">
+          <div class="report-header">
+            <h3>Sales by Category</h3>
+            <button class="btn-export">Export</button>
+          </div>
+          <div class="report-content">
+            <table>
+              <thead>
+                <tr>
+                  <th>Category</th>
+                  <th>Sales</th>
+                  <th>% of Total</th>
+                  <th>Growth</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Electronics</td>
+                  <td>$15,234</td>
+                  <td>33.4%</td>
+                  <td class="positive">+12.5%</td>
+                </tr>
+                <tr>
+                  <td>Clothing</td>
+                  <td>$12,456</td>
+                  <td>27.3%</td>
+                  <td class="positive">+8.3%</td>
+                </tr>
+                <tr>
+                  <td>Home & Garden</td>
+                  <td>$8,789</td>
+                  <td>19.2%</td>
+                  <td class="positive">+5.7%</td>
+                </tr>
+                <tr>
+                  <td>Others</td>
+                  <td>$9,199</td>
+                  <td>20.1%</td>
+                  <td class="negative">-2.1%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="report-card">
+          <div class="report-header">
+            <h3>Customer Demographics</h3>
+            <button class="btn-export">Export</button>
+          </div>
+          <div class="report-content">
+            <table>
+              <thead>
+                <tr>
+                  <th>Age Group</th>
+                  <th>Customers</th>
+                  <th>% of Total</th>
+                  <th>Avg. Order Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>18-24</td>
+                  <td>456</td>
+                  <td>18.6%</td>
+                  <td>$42.50</td>
+                </tr>
+                <tr>
+                  <td>25-34</td>
+                  <td>789</td>
+                  <td>32.2%</td>
+                  <td>$58.75</td>
+                </tr>
+                <tr>
+                  <td>35-44</td>
+                  <td>567</td>
+                  <td>23.1%</td>
+                  <td>$65.20</td>
+                </tr>
+                <tr>
+                  <td>45+</td>
+                  <td>638</td>
+                  <td>26.1%</td>
+                  <td>$72.30</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+</body>
+</html> 

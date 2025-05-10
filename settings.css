@@ -1,0 +1,202 @@
+/* Settings specific styles */
+.header h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Settings Navigation */
+.settings-nav {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+    padding: 0 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.settings-nav button {
+    padding: 10px 20px;
+    border: none;
+    background: none;
+    color: #666;
+    font-size: 14px;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.settings-nav button:hover {
+    color: #6c5ce7;
+}
+
+.settings-nav button.active {
+    color: #6c5ce7;
+    font-weight: 500;
+}
+
+.settings-nav button.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #6c5ce7;
+}
+
+/* Settings Content */
+.settings-content {
+    padding: 20px;
+}
+
+.settings-section {
+    margin-bottom: 30px;
+}
+
+.settings-section h3 {
+    margin: 0 0 20px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.settings-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.setting-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.setting-item:last-child {
+    border-bottom: none;
+}
+
+.setting-info {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.setting-info h4 {
+    margin: 0 0 5px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.setting-info p {
+    margin: 0;
+    font-size: 13px;
+    color: #666;
+}
+
+.setting-control {
+    flex: 1;
+    max-width: 400px;
+}
+
+/* Form Controls */
+.text-input,
+.text-area,
+.select-input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.text-input:focus,
+.text-area:focus,
+.select-input:focus {
+    border-color: #6c5ce7;
+    outline: none;
+}
+
+.text-area {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Logo Upload */
+.logo-upload {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-upload img {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.btn-upload {
+    background: #f0f0f0;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: background 0.3s ease;
+}
+
+.btn-upload:hover {
+    background: #e0e0e0;
+}
+
+/* Save Button */
+.settings-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+    padding: 0 20px;
+}
+
+.btn-save {
+    background: #6c5ce7;
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.btn-save:hover {
+    background: #5b4bc4;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .setting-item {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .setting-info {
+        padding-right: 0;
+    }
+
+    .setting-control {
+        max-width: 100%;
+    }
+
+    .settings-nav {
+        overflow-x: auto;
+        padding-bottom: 10px;
+    }
+
+    .settings-nav button {
+        white-space: nowrap;
+    }
+} 

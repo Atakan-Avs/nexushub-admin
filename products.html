@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - NexusHub</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="products.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <span class="logo">NexusHub</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="sidebar.html">Dashboard</a></li>
+          <li class="active">Products</li>
+          <li><a href="orders.html">Orders</a></li>
+          <li><a href="customers.html">Customers</a></li>
+          <li><a href="campaigns.html">Campaigns</a></li>
+          <li><a href="reports.html">Reports</a></li>
+          <li><a href="settings.html">Settings</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main">
+      <!-- Header -->
+      <header class="header">
+        <div class="header-left">
+          <h1>Products</h1>
+          <div class="search-container">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Search products..." class="search"/>
+          </div>
+        </div>
+        <div class="header-right">
+          <button class="btn-filter">
+            <i class="fas fa-filter"></i>
+            Filter
+          </button>
+          <button class="btn-primary">
+            <i class="fas fa-plus"></i>
+            Add Product
+          </button>
+        </div>
+      </header>
+
+      <!-- Filters Section -->
+      <section class="filters">
+        <div class="filter-group">
+          <label>Category</label>
+          <select>
+            <option>All Categories</option>
+            <option>Electronics</option>
+            <option>Clothing</option>
+            <option>Books</option>
+            <option>Home</option>
+            <option>Sports</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label>Price Range</label>
+          <select>
+            <option>All Prices</option>
+            <option>$0 - $50</option>
+            <option>$50 - $100</option>
+            <option>$100 - $200</option>
+            <option>$200+</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label>Stock Status</label>
+          <select>
+            <option>All</option>
+            <option>In Stock</option>
+            <option>Low Stock</option>
+            <option>Out of Stock</option>
+          </select>
+        </div>
+      </section>
+
+      <!-- Products Table -->
+      <section class="products-table">
+        <table>
+          <thead>
+            <tr>
+              <th>
+                <input type="checkbox" id="select-all"/>
+              </th>
+              <th>Product</th>
+              <th>Category</th>
+              <th>Price</th>
+              <th>Stock</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><input type="checkbox"/></td>
+              <td class="product-cell">
+                <img src="https://via.placeholder.com/40" alt="Product"/>
+                <div>
+                  <h4>iPhone 13 Pro</h4>
+                  <span>SKU: IP13P-256</span>
+                </div>
+              </td>
+              <td>Electronics</td>
+              <td>$999</td>
+              <td>45</td>
+              <td><span class="status in-stock">In Stock</span></td>
+              <td class="actions">
+                <button class="btn-icon"><i class="fas fa-edit"></i></button>
+                <button class="btn-icon"><i class="fas fa-trash"></i></button>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox"/></td>
+              <td class="product-cell">
+                <img src="air.jpg" alt="Product"/>
+                <div>
+                  <h4>Nike Air Max</h4>
+                  <span>SKU: NK-AM-2023</span>
+                </div>
+              </td>
+              <td>Sports</td>
+              <td>$129</td>
+              <td>12</td>
+              <td><span class="status low-stock">Low Stock</span></td>
+              <td class="actions">
+                <button class="btn-icon"><i class="fas fa-edit"></i></button>
+                <button class="btn-icon"><i class="fas fa-trash"></i></button>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox"/></td>
+              <td class="product-cell">
+                <img src="https://via.placeholder.com/40" alt="Product"/>
+                <div>
+                  <h4>Designer Watch</h4>
+                  <span>SKU: DW-2023</span>
+                </div>
+              </td>
+              <td>Accessories</td>
+              <td>$299</td>
+              <td>0</td>
+              <td><span class="status out-of-stock">Out of Stock</span></td>
+              <td class="actions">
+                <button class="btn-icon"><i class="fas fa-edit"></i></button>
+                <button class="btn-icon"><i class="fas fa-trash"></i></button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Pagination -->
+      <section class="pagination">
+        <button class="btn-page"><i class="fas fa-chevron-left"></i></button>
+        <button class="btn-page active">1</button>
+        <button class="btn-page">2</button>
+        <button class="btn-page">3</button>
+        <span>...</span>
+        <button class="btn-page">10</button>
+        <button class="btn-page"><i class="fas fa-chevron-right"></i></button>
+      </section>
+    </div>
+  </div>
+</body>
+</html>

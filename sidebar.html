@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>E-Commerce Dashboard</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <span class="logo">NexusHub</span>
+      </div>
+      <nav>
+        <ul>
+          <li class="active"><a href="sidebar.html">Dashboard</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="orders.html">Orders</a></li>
+          <li><a href="customers.html">Customers</a></li>
+          <li><a href="campaigns.html">Campaigns</a></li>
+          <li><a href="reports.html">Reports</a></li>
+          <li><a href="settings.html">Settings</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main">
+      <!-- Header -->
+      <header class="header">
+        <input type="text" placeholder="Search products or orders..." class="search"/>
+        <div class="profile">
+          <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Profile"/>
+        </div>
+      </header>
+
+      <!-- Dashboard Cards -->
+      <section class="cards">
+        <div class="card purple">
+          <h3>Total Sales</h3>
+          <p class="amount">$579,000</p>
+          <span>25% increase from last month</span>
+        </div>
+        <div class="card pink">
+          <h3>Active Orders</h3>
+          <p class="amount">79</p>
+          <span>12 pending orders</span>
+        </div>
+        <div class="card turquoise">
+          <h3>New Customers</h3>
+          <p class="amount">92</p>
+          <span>This month</span>
+        </div>
+        <div class="card indigo">
+          <h3>Stock Status</h3>
+          <p class="amount">1,250</p>
+          <span>15 items at critical level</span>
+        </div>
+      </section>
+
+      <!-- Charts Section -->
+      <section class="charts">
+        <div class="chart-container">
+          <h3>Sales Overview</h3>
+          <canvas id="salesChart"></canvas>
+        </div>
+        <div class="chart-container">
+          <h3>Product Categories</h3>
+          <canvas id="categoryChart"></canvas>
+        </div>
+        <div class="chart-container">
+          <h3>Customer Distribution</h3>
+          <canvas id="customerChart"></canvas>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="charts.js"></script>
+</body>
+</html>

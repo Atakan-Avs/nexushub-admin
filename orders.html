@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Orders - NexusHub Dashboard</title>
+        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="orders.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      </head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <span class="logo">NexusHub</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="sidebar.html">Dashboard</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="orders.html">Orders</a></li>
+          <li><a href="customers.html">Customers</a></li>
+          <li><a href="campaigns.html">Campaigns</a></li>
+          <li><a href="reports.html">Reports</a></li>
+          <li><a href="settings.html">Settings</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main">
+      <!-- Header -->
+      <header class="header">
+        <input type="text" placeholder="Search orders..." class="search"/>
+        <div class="profile">
+          <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Profile"/>
+        </div>
+      </header>
+
+      <!-- Orders Overview Cards -->
+      <section class="cards">
+        <div class="card purple">
+          <h3>Total Orders</h3>
+          <p class="amount">1,234</p>
+          <span>This month</span>
+        </div>
+        <div class="card pink">
+          <h3>Pending Orders</h3>
+          <p class="amount">45</p>
+          <span>Need attention</span>
+        </div>
+        <div class="card turquoise">
+          <h3>Completed Orders</h3>
+          <p class="amount">1,189</p>
+          <span>This month</span>
+        </div>
+        <div class="card indigo">
+          <h3>Average Order Value</h3>
+          <p class="amount">$234</p>
+          <span>15% increase from last month</span>
+        </div>
+      </section>
+
+      <!-- Orders Table -->
+      <section class="orders-table">
+        <div class="table-header">
+          <h3>Recent Orders</h3>
+          <div class="table-filters">
+            <select>
+              <option>All Status</option>
+              <option>Pending</option>
+              <option>Processing</option>
+              <option>Shipped</option>
+              <option>Delivered</option>
+            </select>
+            <select>
+              <option>Last 7 Days</option>
+              <option>Last 30 Days</option>
+              <option>Last 90 Days</option>
+            </select>
+          </div>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Order ID</th>
+              <th>Customer</th>
+              <th>Date</th>
+              <th>Amount</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>#ORD-001</td>
+              <td>John Doe</td>
+              <td>2024-03-15</td>
+              <td>$299.99</td>
+              <td><span class="status pending">Pending</span></td>
+              <td><button class="btn-view">View</button></td>
+            </tr>
+            <tr>
+              <td>#ORD-002</td>
+              <td>Jane Smith</td>
+              <td>2024-03-14</td>
+              <td>$149.50</td>
+              <td><span class="status processing">Processing</span></td>
+              <td><button class="btn-view">View</button></td>
+            </tr>
+            <tr>
+              <td>#ORD-003</td>
+              <td>Mike Johnson</td>
+              <td>2024-03-14</td>
+              <td>$499.99</td>
+              <td><span class="status shipped">Shipped</span></td>
+              <td><button class="btn-view">View</button></td>
+            </tr>
+            <tr>
+              <td>#ORD-004</td>
+              <td>Sarah Wilson</td>
+              <td>2024-03-13</td>
+              <td>$199.99</td>
+              <td><span class="status delivered">Delivered</span></td>
+              <td><button class="btn-view">View</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </div>
+</body>
+</html>

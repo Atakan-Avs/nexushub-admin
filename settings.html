@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Settings - NexusHub Dashboard</title>
+        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="settings.css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    </head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <span class="logo">NexusHub</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="sidebar.html">Dashboard</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="orders.html">Orders</a></li>
+          <li><a href="customers.html">Customers</a></li>
+          <li><a href="campaigns.html">Campaigns</a></li>
+          <li><a href="reports.html">Reports</a></li>
+          <li><a href="settings.html">Settings</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main">
+      <!-- Header -->
+      <header class="header">
+        <h2>Settings</h2>
+        <div class="profile">
+          <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Profile"/>
+        </div>
+      </header>
+
+      <!-- Settings Navigation -->
+      <nav class="settings-nav">
+        <button class="active">General</button>
+        <button>Store</button>
+        <button>Payment</button>
+        <button>Shipping</button>
+        <button>Notifications</button>
+        <button>Security</button>
+      </nav>
+
+      <!-- Settings Content -->
+      <div class="settings-content">
+        <!-- General Settings -->
+        <section class="settings-section">
+          <h3>General Settings</h3>
+          <div class="settings-card">
+            <div class="setting-item">
+              <div class="setting-info">
+                <h4>Store Name</h4>
+                <p>Your store's display name</p>
+              </div>
+              <div class="setting-control">
+                <input type="text" value="NexusHub Store" class="text-input"/>
+              </div>
+            </div>
+
+            <div class="setting-item">
+              <div class="setting-info">
+                <h4>Store Description</h4>
+                <p>A brief description of your store</p>
+              </div>
+              <div class="setting-control">
+                <textarea class="text-area">Your one-stop shop for all your needs</textarea>
+              </div>
+            </div>
+
+            <div class="setting-item">
+              <div class="setting-info">
+                <h4>Store Logo</h4>
+                <p>Your store's logo image</p>
+              </div>
+              <div class="setting-control">
+                <div class="logo-upload">
+                  <img src="https://via.placeholder.com/100" alt="Store Logo"/>
+                  <button class="btn-upload">Change Logo</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="setting-item">
+              <div class="setting-info">
+                <h4>Store Currency</h4>
+                <p>Default currency for your store</p>
+              </div>
+              <div class="setting-control">
+                <select class="select-input">
+                  <option>USD ($)</option>
+                  <option>EUR (€)</option>
+                  <option>GBP (£)</option>
+                  <option>JPY (¥)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="setting-item">
+              <div class="setting-info">
+                <h4>Time Zone</h4>
+                <p>Your store's time zone</p>
+              </div>
+              <div class="setting-control">
+                <select class="select-input">
+                  <option>(GMT-08:00) Pacific Time</option>
+                  <option>(GMT-05:00) Eastern Time</option>
+                  <option>(GMT+00:00) UTC</option>
+                  <option>(GMT+01:00) Central European Time</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Contact Information -->
+        <section class="settings-section">
+          <h3>Contact Information</h3>
+          <div class="settings-card">
+            <div class="setting-item">
+              <div class="setting-info">
+                <h4>Email Address</h4>
+                <p>Primary contact email</p>
+              </div>
+              <div class="setting-control">
+                <input type="email" value="contact@nexushub.com" class="text-input"/>
+              </div>
+            </div>
+
+            <div class="setting-item">
+              <div class="setting-info">
+                <h4>Phone Number</h4>
+                <p>Store contact number</p>
+              </div>
+              <div class="setting-control">
+                <input type="tel" value="+1 (555) 123-4567" class="text-input"/>
+              </div>
+            </div>
+
+            <div class="setting-item">
+              <div class="setting-info">
+                <h4>Address</h4>
+                <p>Store physical address</p>
+              </div>
+              <div class="setting-control">
+                <textarea class="text-area">123 Commerce Street
+Business District
+New York, NY 10001
+United States</textarea>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Save Button -->
+        <div class="settings-actions">
+          <button class="btn-save">Save Changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html> 
